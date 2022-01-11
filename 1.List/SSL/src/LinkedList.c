@@ -1,6 +1,6 @@
 #include "LinkedList.h"
 
-/* ë…¸ë“œ ìƒì„± */
+/* ³ëµå »ı¼º */
 Node* SSL_CreateNode(ElementType NewData) {
 	Node* NewNode = (Node*)malloc(sizeof(Node));
 
@@ -10,29 +10,29 @@ Node* SSL_CreateNode(ElementType NewData) {
 	return NewNode;
 }
 
-/* ë…¸ë“œ ì†Œë©¸ */
+/* ³ëµå ¼Ò¸ê */
 void SSL_DestroyNode(Node* Node) {
 	free(Node);
 }
 
-/* ë…¸ë“œ ì¶”ê°€ */
-// - ë…¸ë“œ í—¤ë“œì˜ ì£¼ì†Œê°’ì´ NULLì´ë©´ NewNodeì˜ ê°’ì´ ë…¸ë“œí—¤ë“œê°€ ëœë‹¤.
-// - ì•„ë‹ˆë¼ë©´ ë¦¬ìŠ¤íŠ¸ì˜ ë§¨ë’¤ì— ë…¸ë“œê°€ ì¶”ê°€ëœë‹¤.
+/* ³ëµå Ãß°¡ */
+// - ³ëµå ÇìµåÀÇ ÁÖ¼Ò°ªÀÌ NULLÀÌ¸é NewNodeÀÇ °ªÀÌ ³ëµåÇìµå°¡ µÈ´Ù.
+// - ¾Æ´Ï¶ó¸é ¸®½ºÆ®ÀÇ ¸ÇµÚ¿¡ ³ëµå°¡ Ãß°¡µÈ´Ù.
 void SSL_AppendNode(Node** Head, Node* NewNode) {
-	/* í—¤ë“œ ë…¸ë“œê°€ NULL ì´ë¼ë©´ ìƒˆë¡œìš´ ë…¸ë“œê°€ Head */
+	/* Çìµå ³ëµå°¡ NULL ÀÌ¶ó¸é »õ·Î¿î ³ëµå°¡ Head */
 	if ((*Head) == NULL) {
 		*Head = NewNode;
 	}
 	else
 }
 
-/* ë…¸ë“œ ì‚½ì… */
+/* ³ëµå »ğÀÔ */
 void SSL_InsertAfter(Node* Current, Node* NewNode);
 
 void SSL_InsertNewHead(Node** Head, Node* NewHead);
 
-/* ë…¸ë“œ ì œê±° */
+/* ³ëµå Á¦°Å */
 void SSL_RemoveNodeAt(Node* Head, int Location);
 
-/* ë…¸ë“œ ìˆ˜ ì„¸ê¸° */
+/* ³ëµå ¼ö ¼¼±â */
 int SSL_GetNodeCount(Node* Head);
