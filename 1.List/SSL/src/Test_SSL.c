@@ -3,13 +3,14 @@
 int main(void) {
 	int	i = 0;
 	int	Count = 0;
-	Node* List = 0; // 리스트 헤드가 들어갈 빈 깡통 (새 노드(주소)들이 들어갈 것임)
-	Node* Current = 0;
-	Node* NewNode = 0;
+	Node* List = NULL; // 리스트 헤드가 들어갈 빈 깡통 (새 노드(주소)들이 들어갈 것임)
+	Node* Current = NULL;
+	Node* NewNode = NULL;
 
 	/* Node 5개 추가 */
 	for (i = 0; i < 5; i++) {
 		// 리스트헤드에 새 노드들을 넣어서 연결
+		NewNode = SSL_CreateNode(i);
 		SSL_AppendNode(&List, NewNode);
 	}
 
@@ -28,9 +29,15 @@ int main(void) {
 
 	/* 모든 노드를 메모리에서 제거 */
 	for (i = 0; i < Count; i++) {
-		// 첫번째 값에 들어온 친구들 계속 삭제
+		// 첫번째 값들을 계속 삭제한다.
 		Current = SSL_GetNodeAt(List, 0);
-		SSL_DestroyNode(Current);
+		// 현재 값이 존재한다면 삭제함수를 부른다.
+		if (Current != NULL) {
+			// 노드 삭제처리
+			SSL_RemoveNode(&List, Current);
+			// 메모리에서 노드 소멸
+			SSL_DestroyNode(Current);
+		}
 	}
 
 	return 0;
