@@ -1,0 +1,26 @@
+#ifndef ARRAYSTACK_H
+#define ARRAYSTACK_H
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef int ElementType;
+
+typedef struct tagNode {
+	ElementType Data;
+} Node;
+
+typedef struct tagArrayStack {
+	int Capacity;	// 용량
+	int Top;		// 최상위 노드 위치
+	Node * Nodes;	// 노드 배열
+} ArrayStack;
+
+void		AS_CreateStack(ArayStack** Stack, int Capacity);
+void		AS_DestroyStack(ArayStack* Stack);
+void		AS_Push(ArayStack* Stack, ElementType Data);
+ElementType	AS_Pop(ArrayStack* Stack);
+ElementType	AS_Top(ArrayStack* Stack);
+int			AS_GetSize(ArrayStack* Stack);
+int			As_IsEmpty(ArrayStack* Stack);
+#endif
