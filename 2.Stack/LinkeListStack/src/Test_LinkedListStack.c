@@ -15,6 +15,7 @@ int main(void)
     LLS_Push(Stack, LLS_CreateNode("efg"));
     LLS_Push(Stack, LLS_CreateNode("hij"));
 
+    
     Count = LLS_GetSize(Stack);
     printf("Size: %d, Top: %s\n\n",
         Count, LLS_Top(Stack)->Data);
