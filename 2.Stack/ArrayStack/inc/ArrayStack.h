@@ -16,9 +16,9 @@ typedef struct tagArrayStack {
 	Node * Nodes;	// 노드 배열
 } ArrayStack;
 
-void		AS_CreateStack(ArayStack** Stack, int Capacity);
-void		AS_DestroyStack(ArayStack* Stack);
-void		AS_Push(ArayStack* Stack, ElementType Data);
+void		AS_CreateStack(ArrayStack** Stack, int Capacity);
+void		AS_DestroyStack(ArrayStack* Stack);
+void		AS_Push(ArrayStack* Stack, ElementType Data);
 ElementType	AS_Pop(ArrayStack* Stack);
 ElementType	AS_Top(ArrayStack* Stack);
 int			AS_GetSize(ArrayStack* Stack);
