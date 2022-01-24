@@ -1,0 +1,16 @@
+#ifndef DISJOIN_H
+#define DISJOIN_H
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct tagDisjointSet {
+	struct tagDisJointSet* Parent;
+	void* Data;
+} DisjointSet;
+
+void DS_UnionSet(DisjointSet* set1, DisjointSet* set2);
+DisjointSet* DS_FindSEt(DisjointSet* Set);
+DisjointSet* Ds_MakeSEt(void* NewData);
+void DS_DestorySet(DisjointSet* Set);
+#endif
