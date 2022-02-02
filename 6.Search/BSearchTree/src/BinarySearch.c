@@ -11,7 +11,7 @@ BSTNode* BST_CreateNode(ElementType NewData) {
 void BST_DestroyNode(BSTNode* Node) {
 	free(Node);
 }
-void BST_DetroyTree(BSTNode* Tree) {
+void BST_DestroyTree(BSTNode* Tree) {
 	if (Tree->Right != NULL) {
 		BST_DestroyTree(Tree->Right);
 	}
@@ -54,7 +54,7 @@ BSTNode* BSTNode_SearchMinNode(BSTNode* Tree) {
 		return Tree;
 	}
 	else {
-		return BST_SearchMinNode(Tree->Left);
+		return BSTNode_SearchMinNode(Tree->Left);
 	}
 }
 
