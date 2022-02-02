@@ -16,7 +16,7 @@ typedef struct tagBSTNode
 
 BSTNode* BST_CreateNode(ElementType NewData);
 void BST_DestroyNode(BSTNode* Node);
-void BST_DetroyTree(BSTNode* Tree);
+void BST_DestroyTree(BSTNode* Tree);
 
 BSTNode* BSTNode_SearchNode(BSTNode* Tree, ElementType Target);
 BSTNode* BSTNode_SearchMinNode(BSTNode* Tree);
