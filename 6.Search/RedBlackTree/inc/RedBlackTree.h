@@ -24,13 +24,13 @@ void RBT_DestoryNode(RBTNode* Node);
 RBTNode* RBT_SearchNode(RBTNode* Tree, ElementType Target);
 RBTNode* RBT_SearchMinNode(RBTNode* Tree);
 void RBT_InsertNode(RBTNode** Tree, RBTNode * NewNode);
-void RBT_InsertNodeLerper(RBTNode** Tree, RBTNode * NewNode);
+void RBT_InsertNodeHelper(RBTNode** Tree, RBTNode * NewNode);
 RBTNode* RBT_RemoveNode(RBTNode** Root, ElementType Target);
-void RBT_RebuildAfterInsert(RBTNode** Tree, RBTNode* NewNode);
+void RBT_RebuildAfterInsert(RBTNode** Root, RBTNode* X);
 void RBT_RebuildAfterRemove(RBTNode** Root, RBTNode* X);
 
 void RBT_PrintTree(RBTNode* Tree, int Depth, int BlackCount);
 void RBT_RotateLeft(RBTNode** Root, RBTNode* Parent);
-void RBT_RotateRight(RBTNode** Tree, RBTNode* Parent);
+void RBT_RotateRight(RBTNode** Root, RBTNode* Parent);
 
 #endif
